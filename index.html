@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Venue Selection Form</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Add custom CSS styles here if needed */
+  </style>
+</head>
+<body>
+
+<div class="container mt-5">
+  <h2>Event Venue Selection Form</h2>
+  <form id="venueForm">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+    </div>
+    <!-- ... (other form fields) ... -->
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  document.getElementById("venueForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the default form submission behavior
+    
+    // Add your form validation or other processing here
+    validateForm();
+  });
+
+  function validateForm() {
+    // Basic client-side validation
+    var form = document.getElementById("venueForm");
+    if (form.checkValidity()) {
+      // You can add further processing or submit the form to the server here
+      alert("Form submitted successfully!");
+    } else {
+      // Display an error message or take appropriate action
+      alert("Please fill in all required fields.");
+    }
+  }
+</script>
+
+</body>
+</html>
